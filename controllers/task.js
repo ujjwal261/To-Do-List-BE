@@ -9,7 +9,7 @@ export const handleAddTask = async(req ,res) => {
         }
         const newTask = await Task.create({task_description , task_date , status , createdBy});
         return res.status(202).json({msg : "Task created successfully" , task : newTask});
-    }catch{
+    }catch(error){
         console.error("Error in creating the task:", error.message);
         return res.status(500).json({ error: "Failed to create task" });
     }
