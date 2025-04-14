@@ -13,7 +13,7 @@ const PORT = 3000;
 const app = express();
 // middlewares
 app.use(cors({
-    origin: 'https://to-do-react-beta-flax.vercel.app/', // your frontend
+    origin: '*', // your frontend
     credentials: true
   }));
 app.use(express.urlencoded({extended : false}));
